@@ -35,15 +35,21 @@ export default function App() {
     // <>
     //   <RegistrationScreen onLayoutRootView={onLayoutRootView} />
     // </>
-  
+
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Registration">
         <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
           name="Registration"
           component={RegistrationScreen}
           onLayoutRootView={onLayoutRootView}
         />
         <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
           name="Login"
           component={LoginScreen}
           onLayoutRootView={onLayoutRootView}

@@ -10,6 +10,7 @@ import {
   KeyboardAvoidingView,
   Keyboard,
   TouchableWithoutFeedback,
+
 } from "react-native";
 
 const initialState = {
@@ -18,7 +19,8 @@ const initialState = {
   password: "",
 };
 
-export default function RegistrationScreen({ onLayoutRootView }) {
+export default function RegistrationScreen({ onLayoutRootView, navigation }) {
+  console.log("navigation", navigation);
   const [state, setState] = useState(initialState);
 
   const keyboarHide = () => {
@@ -85,7 +87,9 @@ export default function RegistrationScreen({ onLayoutRootView }) {
                 <Text style={styles.btnTitle}>Зареєструватися</Text>
               </TouchableOpacity>
 
-              <Text style={styles.navTextReg}>Вже є акаунт? Увійти</Text>
+              <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+                <Text style={styles.navTextReg}>Вже є акаунт? Увійти</Text>
+              </TouchableOpacity>
             </View>
           </KeyboardAvoidingView>
         </ImageBackground>
