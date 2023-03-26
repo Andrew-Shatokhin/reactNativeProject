@@ -35,7 +35,7 @@ export default function App() {
     // <>
     //   <RegistrationScreen onLayoutRootView={onLayoutRootView} />
     // </>
-
+  
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Registration">
         <Stack.Screen
